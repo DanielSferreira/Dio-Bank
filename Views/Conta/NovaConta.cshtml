@@ -1,0 +1,28 @@
+﻿@model TransasoesBancarias.Models.Conta;
+
+@{
+    ViewBag.Title = "Nova Conta";
+}
+<h2>Nova Conta</h2>
+
+
+<form method="POST" action="NovaContaPOST">
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">NumConta</label>
+        <input class="form-control" required type="number" id="NumConta" minlength="6" maxlength="6" name="NumConta">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome</label>
+        <input class="form-control" required type="text" id="Nome" name="Nome">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Saldo</label>
+        <input class="form-control" required type="number" maxlength="4" id="Saldo" name="Saldo">
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Cadastrar" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

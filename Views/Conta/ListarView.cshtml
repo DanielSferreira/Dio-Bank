@@ -1,0 +1,21 @@
+@model GerirContas
+@{
+    ViewData["Title"] = "Listagem de Contas";
+}
+
+<h4>Listagem de Contas Cadastradas</h4>
+<table class="table">
+    <tr>
+        <th>Número da Conta</th>
+        <th>Nome</th>
+        <th>Saldo</th>
+    </tr>
+    @foreach (var item in Model.Geranciador_Contas.ToArray())
+    {
+        <tr>
+            <td>@item.NumConta</td>
+            <td>@item.Nome</td>
+            <td>@item.Saldo</td>
+        </tr>
+    }
+</table>

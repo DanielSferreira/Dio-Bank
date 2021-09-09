@@ -1,0 +1,27 @@
+@model GerirContas
+@{
+    ViewData["Title"] = "Transferir";
+}
+<form method="POST" action="Transferir">
+
+    <h4>Transfira para uma conta um Valor</h4>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Conta</label>
+        <select class="form-control" id="contaTo" name="contaTo" required>
+            @foreach (var item in Model.Geranciador_Contas.ToArray())
+            {
+                <option value="@item.NumConta"> @item.Nome </option>
+            }
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Valor</label>
+        <input class="form-control" required type="text" id="valor" required min="0" name="valor">
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Transferir" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

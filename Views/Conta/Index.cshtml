@@ -1,0 +1,26 @@
+﻿@model TransasoesBancarias.Models.Conta
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        
+        <br />
+        <br />
+
+        <h2>Olá, @Model.Nome.Split()[0]</h2>
+        <h3>Seu saldo é: R$ @Model.Saldo.ToString("0.00")</h3>
+        
+        <br />
+
+        <h4>Deseja Fazer um(a):<br />
+            @Html.ActionLink(" Transferencia","TransferirView") <br />
+            @Html.ActionLink(" Saque","SacarView") <br />
+            @Html.ActionLink(" Deposito","DepositarView") <br />
+        </h4>
+    </div>
+    <div class="col-lg-6">
+    </div>
+
+</div>

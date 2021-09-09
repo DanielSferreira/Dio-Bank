@@ -1,0 +1,16 @@
+@model Conta 
+@{
+    ViewData["Title"] = "Depositar";
+}
+<form method="POST" action="Depositar">
+    <h4>Deposito</h4>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Um Valor para o Depositar</label>
+        <input class="form-control" required type="text" id="c" placeholder="" name="c" >
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Transferir" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
